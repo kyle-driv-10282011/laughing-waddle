@@ -1,0 +1,31 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Currency</th>
+    <th>Quantity Type</th>
+  </tr>
+  <tr *ngFor="let material of materials">
+    <td>{{ material[0] }}</td>
+    <td>{{ material[1] }}</td>
+    <td>{{ material[2] }}</td>
+    <td>{{ material[3] }}</td>
+    <td>{{ material[4] }}</td>
+    <button (click)="deleteMaterial(material[0])">Delete Data</button>
+  </tr>
+</table>
+
+
+<div>
+  <button (click)="addItem()">Add Item</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of itemList; let i = index">
+    {{ item }}
+    <button (click)="removeItem(i)">Remove</button>
+  </li>
+</ul>
+
+  
